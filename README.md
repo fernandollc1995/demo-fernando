@@ -8,7 +8,7 @@ Levantar servidor backend:
 - levantar spring boot: mvn spring-boot:run
 - por defecto debe levantar el servidor en el puerto 8080
 
-Levantar servidor backend:
+Levantar servidor frontend:
 - ubicarse en: cd ./demo-frontend
 - levantar angular: ng serve
 - por defecto debe levantar el servidor en el puerto 4200
