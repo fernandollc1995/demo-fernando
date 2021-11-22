@@ -10,6 +10,7 @@ Levantar servidor backend:
 
 Levantar servidor frontend:
 - ubicarse en: cd ./demo-frontend
+- descargar paqueteria: npm install
 - levantar angular: ng serve
 - por defecto debe levantar el servidor en el puerto 4200
 
