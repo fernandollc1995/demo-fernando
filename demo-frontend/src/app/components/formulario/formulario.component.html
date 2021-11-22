@@ -1,0 +1,54 @@
+<div class="container d-grid align-items-center justify-content-center">
+
+    <div class="card" style="width: 30rem; margin-top: 10rem;">
+        <div class="card-body">
+
+            <form [formGroup]="encuestaForm" (ngSubmit)="submit()">
+                <div class="mb-3">
+                    <label for="emailInput" class="form-label">Email</label>
+                    <input 
+                        type="email" 
+                        class="form-control"
+                        [ngClass]="{'is-invalid': isEmailInvalid}"
+                        id="emailInput" 
+                        placeholder="Ingresa tu correo"
+                        formControlName="email" 
+                    >
+                    <div id="validationServer03Feedback" 
+                        class="invalid-feedback"
+                        *ngIf="isEmailInvalid && formControls['email'].errors?.required">
+                        Ingresar un correo electronico.
+                    </div>
+                    <div id="validationServer03Feedback" 
+                        class="invalid-feedback"
+                        *ngIf="isEmailInvalid && formControls['email'].errors?.email">
+                        Formato de correo incorrecto.
+                    </div>
+
+                </div>
+                <div class="mb-3">
+
+                    <label for="emailInput" class="form-label">Tipo de musica</label>
+                    <select 
+                        class="form-select"
+                        formControlName="musicaTipoSelected"
+                        [ngClass]="{'is-invalid': isNotMusicSelected}">
+                        <option [ngValue]="null" selected disabled>Elige tu tipo de musica</option>
+                        <option 
+                            *ngFor="let musicaTipo of musicaTipoList" 
+                            [ngValue]="musicaTipo">
+                            {{musicaTipo.name}}
+                        </option>
+                    </select>
+                    <div id="validationServer03Feedback" 
+                        class="invalid-feedback"
+                        *ngIf="isNotMusicSelected">
+                        Elige tu tipo de musica favorita.
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary mt-1">Registrar</button>
+            </form>
+        </div>
+    </div>
+
+</div>

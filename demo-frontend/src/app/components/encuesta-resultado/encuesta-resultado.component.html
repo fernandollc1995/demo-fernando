@@ -1,0 +1,21 @@
+<div class="container d-grid align-items-center justify-content-center">
+
+    <div class="card" style="width: 30rem; margin-top: 10rem;">
+        <div class="card-body">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Tipo de Musica</th>
+                        <th scope="col">Votos</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let resultado of encuestaResultados">
+                        <th scope="row">{{resultado.name}}</th>
+                        <td>{{resultado.votos}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
